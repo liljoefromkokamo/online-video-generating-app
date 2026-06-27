@@ -1,0 +1,25 @@
+generator client { provider = "prisma-client-js" }
+datasource db { provider = "postgresql"; url = env("DATABASE_URL") }
+
+model VideoJob {
+  id          String   @id @default(cuid())
+  userId      String
+  prompt      String
+  enhancedPrompt String?
+  status      JobStatus @default(PENDING)
+  progress    Int      @default(0) // 0 to 100
+  aspectRatio String   @default("16:9")
+  duration    Int      @default(5)
+  videoUrl    String?
+  thumbnailUrl String?
+  creditsUsed Int      @default(1)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+enum JobStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  FAILED
+}
