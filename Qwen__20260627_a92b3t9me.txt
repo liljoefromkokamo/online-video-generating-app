@@ -1,0 +1,25 @@
+text-to-video-app/
+├── app/
+│   ├── api/
+│   │   └── generate/
+│   │       └── route.ts
+│   ├── dashboard/
+│   │   └── page.tsx
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── VideoGenerator.tsx
+│   ├── VideoGallery.tsx
+│   ├── Sidebar.tsx
+│   └── ProgressBar.tsx
+├── lib/
+│   ├── replicate.ts
+│   ├── db.ts
+│   └── utils.ts
+├── prisma/
+│   └── schema.prisma
+├── .env.local
+├── next.config.js
+├── package.json
+└── tailwind.config.ts

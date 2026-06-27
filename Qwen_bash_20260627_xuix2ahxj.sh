@@ -1,0 +1,1 @@
+npm install next-auth @next-auth/prisma-adapter stripe
