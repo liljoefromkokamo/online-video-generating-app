@@ -1,0 +1,19 @@
+# Exported from Render on 2026-06-29T05:36:52Z
+version: "1"
+projects:
+- name: My project
+  environments:
+  - name: Production
+    services:
+    - type: web
+      name: online-video-generating-app
+      runtime: docker
+      repo: https://github.com/liljoefromkokamo/online-video-generating-app
+      plan: free
+      envVars:
+      - key: Josephus
+        sync: false
+      region: oregon
+      dockerContext: .
+      dockerfilePath: ./Dockerfile
+      autoDeployTrigger: commit
